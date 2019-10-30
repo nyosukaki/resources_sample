@@ -8,6 +8,12 @@ class UsersController < ApplicationController
     User.create(user_params)
   end
 
+  private
+
+  def user_params
+    prams.require(:user).permit(:name, :age)
+  end
+  
 
 
 end
